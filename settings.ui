@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Settings</class>
+ <widget class="QWidget" name="Settings">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Settings</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="res_static.qrc">
+    <normaloff>:/icon/source/res/photo/icon/setting.png</normaloff>:/icon/source/res/photo/icon/setting.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#Settings{
+border-image: url(:/res_static/source/res/photo/pexels-pixabay-41004.jpg);
+}
+QLineEdit{
+border-radius:5px;
+color:#808080;
+}
+#btn_confirm{
+background:#03a9f4;
+color:#fff;
+border-radius:5px;
+}
+#btn_back{
+background:#808080;
+color:#fff;
+border-radius:5px;
+}</string>
+  </property>
+  <widget class="QPushButton" name="btn_back">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>240</y>
+     <width>80</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>返回</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_confirm">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>240</y>
+     <width>80</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>确认</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>70</y>
+     <width>321</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <property name="spacing">
+     <number>35</number>
+    </property>
+    <item>
+     <widget class="QLabel" name="Lab_serverport">
+      <property name="text">
+       <string>服务器端口</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="Edt_serverport"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>30</y>
+     <width>321</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <property name="spacing">
+     <number>50</number>
+    </property>
+    <item>
+     <widget class="QLabel" name="Lab_serverip">
+      <property name="text">
+       <string>服务器IP</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="Edt_serverip"/>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="res_static.qrc"/>
+ </resources>
+ <connections/>
+</ui>

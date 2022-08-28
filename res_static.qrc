@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/res_static">
+        <file>../../../source/res/photo/pexels-junior-teixeira-2047905.jpg</file>
+        <file>../../../source/res/photo/pexels-Mountain-peaks.jpg</file>
+        <file>../../../source/res/photo/pexels-night-city.jpg</file>
+        <file>../../../source/res/photo/pexels-pixabay-41004.jpg</file>
+        <file>../../../source/res/photo/pexels-The-pier.jpg</file>
+        <file>../../../source/res/photo/pexels-thisisengineering-3861969.jpg</file>
+        <file>../../../source/res/photo/pexels-tyler-lastovich-772803.jpg</file>
+    </qresource>
+    <qresource prefix="/icon">
+        <file>../../../source/res/photo/icon/title.png</file>
+        <file>../../../source/res/photo/icon/setting.png</file>
+    </qresource>
+</RCC>
