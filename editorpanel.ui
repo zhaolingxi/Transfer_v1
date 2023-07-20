@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>EditorPanel</class>
+ <widget class="QDialog" name="EditorPanel">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1130</width>
+    <height>774</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>编辑面板</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="res_static.qrc">
+    <normaloff>:/icon/source/res/photo/icon/title.png</normaloff>:/icon/source/res/photo/icon/title.png</iconset>
+  </property>
+  <widget class="QTextEdit" name="textEdit">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>971</width>
+     <height>751</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QWidget" name="verticalLayoutWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>1000</x>
+     <y>310</y>
+     <width>101</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QPushButton" name="btn_close">
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+	font-family:Microsoft Yahei;
+	color:white;
+	background-color:rgb(14 , 150 , 254);
+	border-radius:5px;
+}
+
+QPushButton:hover
+{
+	background-color:rgb(44 , 137 , 255);
+}
+
+QPushButton:pressed
+{
+	background-color:rgb(14 , 135 , 228);
+	padding-left:3px;
+	padding-top:3px;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>关闭</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btn_back">
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+	font-family:Microsoft Yahei;
+	color:white;
+	background-color:rgb(14 , 150 , 254);
+	border-radius:5px;
+}
+
+QPushButton:hover
+{
+	background-color:rgb(44 , 137 , 255);
+}
+
+QPushButton:pressed
+{
+	background-color:rgb(14 , 135 , 228);
+	padding-left:3px;
+	padding-top:3px;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>取消编辑</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btn_ok">
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+	font-family:Microsoft Yahei;
+	color:white;
+	background-color:rgb(14 , 150 , 254);
+	border-radius:5px;
+}
+
+QPushButton:hover
+{
+	background-color:rgb(44 , 137 , 255);
+}
+
+QPushButton:pressed
+{
+	background-color:rgb(14 , 135 , 228);
+	padding-left:3px;
+	padding-top:3px;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>确定</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="res_static.qrc"/>
+ </resources>
+ <connections/>
+</ui>

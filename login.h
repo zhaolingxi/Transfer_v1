@@ -21,6 +21,10 @@ public:
 private slots:
     void on_btn_login_setting_clicked();
 
+    void on_pushButton_clicked();
+
+    void on_btn_about_me_clicked();
+
 private:
     Ui::login *ui;
 };

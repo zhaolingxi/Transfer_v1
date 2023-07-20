@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Database_serach</class>
+ <widget class="QDialog" name="Database_serach">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1357</width>
+    <height>875</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>database_serach</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="res_static.qrc">
+    <normaloff>:/icon/source/res/photo/icon/title.png</normaloff>:/icon/source/res/photo/icon/title.png</iconset>
+  </property>
+  <widget class="QWidget" name="verticalLayoutWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>1210</x>
+     <y>340</y>
+     <width>101</width>
+     <height>211</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QPushButton" name="btn_close">
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+	font-family:Microsoft Yahei;
+	color:white;
+	background-color:rgb(14 , 150 , 254);
+	border-radius:5px;
+}
+
+QPushButton:hover
+{
+	background-color:rgb(44 , 137 , 255);
+}
+
+QPushButton:pressed
+{
+	background-color:rgb(14 , 135 , 228);
+	padding-left:3px;
+	padding-top:3px;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>退出程序</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btn_back">
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+	font-family:Microsoft Yahei;
+	color:white;
+	background-color:rgb(14 , 150 , 254);
+	border-radius:5px;
+}
+
+QPushButton:hover
+{
+	background-color:rgb(44 , 137 , 255);
+}
+
+QPushButton:pressed
+{
+	background-color:rgb(14 , 135 , 228);
+	padding-left:3px;
+	padding-top:3px;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>返回</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btn_ok">
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+	font-family:Microsoft Yahei;
+	color:white;
+	background-color:rgb(14 , 150 , 254);
+	border-radius:5px;
+}
+
+QPushButton:hover
+{
+	background-color:rgb(44 , 137 , 255);
+}
+
+QPushButton:pressed
+{
+	background-color:rgb(14 , 135 , 228);
+	padding-left:3px;
+	padding-top:3px;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>搜索</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btn_del">
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+	font-family:Microsoft Yahei;
+	color:white;
+	background-color:rgb(14 , 150 , 254);
+	border-radius:5px;
+}
+
+QPushButton:hover
+{
+	background-color:rgb(44 , 137 , 255);
+}
+
+QPushButton:pressed
+{
+	background-color:rgb(14 , 135 , 228);
+	padding-left:3px;
+	padding-top:3px;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>删除</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btn_showall">
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+	font-family:Microsoft Yahei;
+	color:white;
+	background-color:rgb(14 , 150 , 254);
+	border-radius:5px;
+}
+
+QPushButton:hover
+{
+	background-color:rgb(44 , 137 , 255);
+}
+
+QPushButton:pressed
+{
+	background-color:rgb(14 , 135 , 228);
+	padding-left:3px;
+	padding-top:3px;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>展示所有</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>140</y>
+     <width>1141</width>
+     <height>691</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="cmb_mode">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>50</y>
+     <width>158</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>mode</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="placeholderText">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="textEdit_key">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>40</y>
+     <width>691</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+font: 12pt &quot;Microsoft YaHei UI&quot;;
+color:rgb(0, 0, 0);
+</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="cmb_filter1">
+   <property name="geometry">
+    <rect>
+     <x>1010</x>
+     <y>40</y>
+     <width>158</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>mode</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="placeholderText">
+    <string/>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="res_static.qrc"/>
+ </resources>
+ <connections/>
+</ui>

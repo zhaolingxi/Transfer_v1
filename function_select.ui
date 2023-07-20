@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Function_Select</class>
+ <widget class="QDialog" name="Function_Select">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>功能选择</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="res_static.qrc">
+    <normaloff>:/icon/source/res/photo/icon/title.png</normaloff>:/icon/source/res/photo/icon/title.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QPushButton{
+background:#CDCDCD;
+color:#fff;
+border-radius:5px;
+}
+</string>
+  </property>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>30</y>
+     <width>191</width>
+     <height>221</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QPushButton" name="DataBase">
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+	font-family:Microsoft Yahei;
+	color:white;
+	background-color:rgb(14 , 150 , 254);
+	border-radius:5px;
+}
+
+QPushButton:hover
+{
+	background-color:rgb(44 , 137 , 255);
+}
+
+QPushButton:pressed
+{
+	background-color:rgb(14 , 135 , 228);
+	padding-left:3px;
+	padding-top:3px;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>DataBase</string>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+      <property name="autoExclusive">
+       <bool>true</bool>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>File_Assistant</string>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_3">
+      <property name="text">
+       <string>Code_Copolit</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_4">
+      <property name="text">
+       <string>Trans_Fer</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="verticalLayoutWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>100</y>
+     <width>101</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QPushButton" name="ok_btn">
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+	font-family:Microsoft Yahei;
+	color:white;
+	background-color:rgb(14 , 150 , 254);
+	border-radius:5px;
+}
+
+QPushButton:hover
+{
+	background-color:rgb(44 , 137 , 255);
+}
+
+QPushButton:pressed
+{
+	background-color:rgb(14 , 135 , 228);
+	padding-left:3px;
+	padding-top:3px;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>退出程序</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="back_btn">
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+	font-family:Microsoft Yahei;
+	color:white;
+	background-color:rgb(14 , 150 , 254);
+	border-radius:5px;
+}
+
+QPushButton:hover
+{
+	background-color:rgb(44 , 137 , 255);
+}
+
+QPushButton:pressed
+{
+	background-color:rgb(14 , 135 , 228);
+	padding-left:3px;
+	padding-top:3px;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>返回</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="res_static.qrc"/>
+ </resources>
+ <connections/>
+</ui>

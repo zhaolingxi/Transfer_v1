@@ -11,5 +11,8 @@
     <qresource prefix="/icon">
         <file>../../../source/res/photo/icon/title.png</file>
         <file>../../../source/res/photo/icon/setting.png</file>
+        <file>../../../source/res/photo/icon/meme.jpg</file>
+        <file>../../../source/res/photo/icon/meme.png</file>
+        <file>../../../source/res/photo/icon/title.ico</file>
     </qresource>
 </RCC>

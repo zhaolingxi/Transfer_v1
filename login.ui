@@ -89,6 +89,28 @@ font-size:30px;
       <height>31</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+	font-family:Microsoft Yahei;
+	color:white;
+	background-color:rgb(14 , 150 , 254);
+	border-radius:5px;
+}
+
+QPushButton:hover
+{
+	background-color:rgb(44 , 137 , 255);
+}
+
+QPushButton:pressed
+{
+	background-color:rgb(14 , 135 , 228);
+	padding-left:3px;
+	padding-top:3px;
+}
+</string>
+    </property>
     <property name="text">
      <string>确认</string>
     </property>
@@ -145,11 +167,24 @@ font-size:30px;
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">*{
-background:rgba(0,0,0,0.4);
-background:#03a9f4;
-color:#fff;
-border-radius:5px;
+     <string notr="true">QPushButton
+{
+	font-family:Microsoft Yahei;
+	color:white;
+	background-color:rgb(14 , 150 , 254);
+	border-radius:5px;
+}
+
+QPushButton:hover
+{
+	background-color:rgb(44 , 137 , 255);
+}
+
+QPushButton:pressed
+{
+	background-color:rgb(14 , 135 , 228);
+	padding-left:3px;
+	padding-top:3px;
 }</string>
     </property>
     <property name="text">
@@ -163,6 +198,52 @@ border-radius:5px;
      <size>
       <width>20</width>
       <height>20</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_about_me">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>10</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::TabFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+	font-family:Microsoft Yahei;
+	color:white;
+	border-radius:5px;
+}
+
+QPushButton:hover
+{
+	background-color:rgb(44 , 137 , 255);
+}
+
+QPushButton:pressed
+{
+	background-color:rgb(14 , 135 , 228);
+	padding-left:3px;
+	padding-top:3px;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="res_static.qrc">
+      <normaloff>:/icon/source/res/photo/icon/meme.png</normaloff>:/icon/source/res/photo/icon/meme.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>30</width>
+      <height>30</height>
      </size>
     </property>
    </widget>
