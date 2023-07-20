@@ -5,6 +5,10 @@
 #include<QRegularExpression>
 #include<QProcess>
 #include<QDir>
+#include<QFuture>
+#include<QtConcurrent>
+
+
 #include"read_files.h"
 
 //#include"sqlite3.h"
@@ -160,8 +164,14 @@ void Database_In_Out::on_btn_ok_clicked()
         int sz=_selectedFiles.count();
         for(int i=0;i<sz;i++)
         {
-            bool ret=readDataFromSqlWriteToDB(ui->textEdit->toPlainText(),_selectedFiles[i]);
-            if(ret)
+            QFuture<void> res = QtConcurrent::run(this, &Database_In_Out::readDataFromSqlWriteToDB,ui->textEdit->toPlainText(),_selectedFiles[i]);//启动线程调用
+            while(!res.isFinished())
+            {
+                    //
+                QApplication::processEvents();//不停地处理事件，让程序保持响应
+            }
+            //bool ret=readDataFromSqlWriteToDB(ui->textEdit->toPlainText(),_selectedFiles[i]);
+            if(!res.isFinished())
             {
                 QMessageBox::information(nullptr,"提示","<font size='2' color='red'>输出完成，清查看文件</font>", QMessageBox::Yes);
             }
@@ -171,8 +181,15 @@ void Database_In_Out::on_btn_ok_clicked()
     {
         if(ui->cmb_mode->currentText()==".sql")
         {
-            bool ret=readDataFromSqlWriteToSQL("output.sql",filePath);
-            if(ret)
+            QString out_file_name="output.sql";
+            QFuture<void> res = QtConcurrent::run(this, &Database_In_Out::readDataFromSqlWriteToSQL,out_file_name,filePath);//启动线程调用
+            while(!res.isFinished())
+            {
+                    //
+                QApplication::processEvents();//不停地处理事件，让程序保持响应
+            }
+            //bool ret=readDataFromSqlWriteToSQL("output.sql",filePath);
+            if(!res.isFinished())
             {
                 QMessageBox::information(nullptr,"提示","<font size='2' color='red'>输出完成，清查看文件</font>", QMessageBox::Yes);
             }
@@ -210,7 +227,7 @@ void Database_In_Out::readDataFromSqlWriteToCSV(const QString &tableName,const Q
             strString = strList.join(", ")+"\n";//给两个列数据之前加“,”号，一行数据末尾加回车
             strList.clear();//记录一行数据后清空，再记下一行数据
             csvFile.write(strString.toUtf8());//使用方法：转换为Utf8格式后在windows下的excel打开是乱码,可先用notepad++打开并转码为unicode，再次用excel打开即可。
-            qDebug()<<strString.toUtf8();
+            //qDebug()<<strString.toUtf8();
        }
         csvFile.close();
      }
@@ -218,26 +235,6 @@ void Database_In_Out::readDataFromSqlWriteToCSV(const QString &tableName,const Q
 
 bool Database_In_Out::readDataFromSqlWriteToSQL(const QString &sqlFileName,const QString &filePath)
 {
-
-
-//       QProcess* p=new QProcess();
-//       QString database=_db_path.c_str();
-//            p->start("cmd.exe");
-//            QString cmd0="sqlite3 \r\n";
-//            QString cmd1=".open test1.db \r\n";
-//            QString cmd2=".output testq.sql \r\n";
-//            QString cmd3=".dump \r\n";
-//            QString cmd4=".exit \r\n";
-//            QString cmd=cmd0+cmd1+cmd2+cmd3+cmd4;
-
-//            /* 转为char*并写入 */
-//            QByteArray qbarr = cmd.toLatin1();
-//            char *ch = qbarr.data();
-//            qint64 len = cmd.length();
-//            p->write(ch, len);
-//            p->waitForFinished(3000);	//避免阻塞，3秒等待时间，重要
-//            p->close();
-
         QProcess* p=new QProcess();
          p->start("cmd.exe");
          QString cmd0="sqlite3 ";cmd0+=ui->textEdit->toPlainText();cmd0+=" .dump >";
@@ -249,7 +246,7 @@ bool Database_In_Out::readDataFromSqlWriteToSQL(const QString &sqlFileName,const
          char *ch = qbarr.data();
          qint64 len = cmd.length();
          p->write(ch, len);
-         bool ret= p->waitForFinished(3000);	//避免阻塞，3秒等待时间，重要
+         bool ret= p->waitForFinished();	//避免阻塞，3秒等待时间，重要
          p->close();
          return ret;
 }
@@ -266,7 +263,7 @@ bool Database_In_Out::readDataFromSqlWriteToDB(const QString &sqlFileName,const 
      char *ch = qbarr.data();
      qint64 len = cmd.length();
      p->write(ch, len);
-     bool ret= p->waitForFinished(3000);	//避免阻塞，3秒等待时间，重要
+     bool ret= p->waitForFinished();	//避免阻塞，3秒等待时间，重要
      p->close();
      return ret;
 }
@@ -289,6 +286,9 @@ bool readDataFromCSVWriteToDB(const QString &sqlFileName,const QString &tableNam
      p->close();
      return ret;
 }
+
+
+
 
 
 
